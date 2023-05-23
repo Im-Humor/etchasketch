@@ -9,3 +9,7 @@ html, body {
     flex-direction: column;
     flex: 1;
 }
+
+.hover-on {
+    background-color: darkgrey;
+}
