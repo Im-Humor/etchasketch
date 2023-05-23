@@ -1,6 +1,10 @@
 let sqrContainer = document.querySelector(".sqr-container");
 
-let gridPrompt = parseInt(prompt("What size grid?"), 10);
+let gridPrompt = 0
+while (gridPrompt <= 0 || gridPrompt > 100) {
+    gridPrompt = parseInt(prompt("Please enter a grid size between 1 and 100"), 10);
+}
+
 
 for(x = 0; x < gridPrompt; x++) {
     let sqrRow = document.createElement("div");
@@ -14,6 +18,7 @@ for(x = 0; x < gridPrompt; x++) {
         let sqrStyle = square.style
         sqrStyle.backgroundColor = 'lightgrey';
         sqrStyle.border = 'solid';
+        sqrStyle.borderWidth = "1px";
         sqrStyle.flex = '1';
         sqrRow.appendChild(square);
     }
